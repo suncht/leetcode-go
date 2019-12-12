@@ -26,5 +26,43 @@ func StringifyLinkedList(head *ListNode) string {
 		}
 	}
 	return buffer.String()
+}
 
+func GetLinkedListWithOne() *ListNode {
+	var head = &ListNode{
+		Val:  1,
+		Next: nil,
+	}
+
+	return head
+}
+func GetLinkedListWith2() *ListNode {
+	return GenerateLinkedList(2, 1)
+}
+
+func GetLinkedListWith3() *ListNode {
+	return GenerateLinkedList(3, 1)
+}
+
+func GetLinkedListWith4() *ListNode {
+	return GenerateLinkedList(4, 1)
+}
+
+func GenerateLinkedList(n int, incrment int) *ListNode {
+	if incrment == 0 {
+		incrment = 1
+	}
+	var head = &ListNode{
+		Val:  1 * incrment,
+		Next: nil,
+	}
+	var ptr = head
+	for i := 2; i <= n; i++ {
+		ptr.Next = &ListNode{
+			Val:  i * incrment,
+			Next: nil,
+		}
+		ptr = ptr.Next
+	}
+	return head
 }

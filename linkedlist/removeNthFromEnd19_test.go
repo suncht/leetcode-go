@@ -6,7 +6,7 @@ import (
 	"testing"
 )
 
-func Test(t *testing.T) {
+func TestremoveNthFromEnd19(t *testing.T) {
 	var head = &model.ListNode{
 		Val:  1,
 		Next: nil,
@@ -24,7 +24,7 @@ func Test(t *testing.T) {
 	fmt.Println("结果：" + str)
 }
 
-func Test2(t *testing.T) {
+func TestremoveNthFromEnd19_2(t *testing.T) {
 	var head = &model.ListNode{
 		Val:  1,
 		Next: nil,
